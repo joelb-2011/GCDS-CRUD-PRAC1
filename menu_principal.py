@@ -11,7 +11,7 @@ class Menu:
         print(self.titulo)
         for opcion in self.opciones:
             print(opcion)
-        opc = input("Elija opcion[1...{}]:".format(len(self.opciones)))
+        opc = input("Elija opción[1...{}]:".format(len(self.opciones)))
         print("")
         return opc
 
@@ -20,7 +20,7 @@ opc = ""
 while opc != "5":
 
     os.system("cls")
-    men = Menu("Menu Principal",
+    men = Menu("Menú Principal",
                ["1). Calculadora", "2). Operación Numeros", "3). Tratamiento de Listas", "4). Operaciones de  Cadenas",
                 "5). Salir"])
     opc = men.menu()
@@ -31,18 +31,18 @@ while opc != "5":
         while opc1 != "10":
             os.system("cls")
             print("Calculadora")
-            men1 = Menu("Menu secundario",
-                        ["1)Suma ", "2)Resta", "3)Multiplicacion", "4)Division", "5)Exponente", "6)Valor Absoluto",
-                         "7)Circunferencia", "8)Area Circulo", "9)Area Cuadrado", "10)Salir"])
+            men1 = Menu("Menú secundario",
+                        ["1)Suma ", "2)Resta", "3)Multiplicación", "4)División", "5)Exponente", "6)Valor Absoluto",
+                         "7)Circunferencia", "8)Área Círculo", "9)Área Cuadrado", "10)Salir"])
             opc1 = men1.menu()
             os.system("cls")
             if opc1 == "1":
-                print("Calculadora suma")
+                print("Calculadora Suma")
                 print(" ")
-                n1 = int(input("ingrese un numero: "))
-                n2 = int(input("ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
+                n2 = int(input("Ingrese un número: "))
                 cal = CalEstandar(n1, n2)
-                print("la suma de los 2 numero es:", cal.suma())
+                print("La suma de los 2 numero es:", cal.suma())
                 input("Presionne una tecla para continuar....")
 
 
@@ -51,37 +51,37 @@ while opc != "5":
                 print("Calculadora Resta")
                 print(" ")
 
-                n1 = int(input("ingrese un numero: "))
-                n2 = int(input("ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
+                n2 = int(input("Ingrese un número: "))
                 cal = CalEstandar(n1, n2)
-                print("la resta de los 2 numero es:", cal.resta())
-                input("Presionne una tecla para continuar....")
+                print("La resta de los 2 números es:", cal.resta())
+                input("Presione una tecla para continuar....")
 
             elif opc1 == "3":
-                print("Calculadora Multiplicacion")
+                print("Calculadora Multiplicación")
                 print(" ")
 
-                n1 = int(input("ingrese un numero: "))
-                n2 = int(input("ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
+                n2 = int(input("Ingrese un número: "))
                 cal = CalEstandar(n1, n2)
-                print("la multiplicacion de los 2 numero es:", "{}*{}={}".format(n1, n2, cal.mutiplicacion()))
-                input("Presionne una tecla para continuar....")
+                print("La multiplicación de los 2 números es:", "{}*{}={}".format(n1, n2, cal.mutiplicacion()))
+                input("Presione una tecla para continuar....")
 
             elif opc1 == "4":
-                print("Calculadora Division")
+                print("Calculadora División")
                 print(" ")
-                n1 = int(input("ingrese un numero: "))
-                n2 = int(input("ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
+                n2 = int(input("Ingrese un número: "))
                 cal = CalEstandar(n1, n2)
-                print("la división de los 2 numero es:", "{}/{}={}".format(n1, n2, cal.division()))
+                print("La división de los 2 numeros es:", "{}/{}={}".format(n1, n2, cal.division()))
                 input("Presione una tecla para continuar....")
 
 
             elif opc1 == "5":
                 print("Calculadora Exponente")
                 print(" ")
-                n1 = int(input("ingrese la base: "))
-                n2 = int(input("ingrese el exponente: "))
+                n1 = int(input("Ingrese la base: "))
+                n2 = int(input("Ingrese el exponente: "))
                 cal = CalEstandar(n1, n2)
                 print("La multiplicación de potencia es :", "{}**{}={}".format(n1, n2, cal.exponente()))
                 input("Presione una tecla para continuar....")
@@ -90,7 +90,7 @@ while opc != "5":
             elif opc1 == "6":
                 print("Calculadora Valor Absoluto")
                 print(" ")
-                n1 = int(input("ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
                 cal = CalEstandar(n1, 0)
                 print("El valor absoluto es de: ", cal.valorAbsoluto(n1))
                 input("Presione una tecla para continuar....")
@@ -99,26 +99,26 @@ while opc != "5":
             elif opc1 == "7":
                 print("Calculadora Circunferencia")
                 print(" ")
-                n1 = int(input("ingrese el valor del radio: "))
+                n1 = int(input("Ingrese el valor del radio: "))
                 cal = CalCientifica(n1, 0)
-                print("El perimetro de la circuferencia es: ", cal.circunferencia())
+                print("El perímetro de la circuferencia es: ", cal.circunferencia())
                 input("Presione una tecla para continuar....")
 
 
             elif opc1 == "8":
-                print("Calculadora Area Circulo")
+                print("Calculadora Área Círculo")
                 print(" ")
-                n1 = int(input("Ingrese el radio del circulo: "))
+                n1 = int(input("Ingrese el radio del círculo: "))
                 cal = CalCientifica(n1, 0)
-                print("El area del circulo es: ", cal.areaCirculo())
+                print("El área del círculo es: ", cal.areaCirculo())
                 input("Presione una tecla para continuar....")
 
             elif opc1 == "9":
-                print("Calculadora Area Cuadrado")
+                print("Calculadora Área Cuadrado")
                 print(" ")
-                n2 = int(input("ingrese el valor de la radio: "))
+                n2 = int(input("Ingrese el valor de la radio: "))
                 cal = CalCientifica(0, n2)
-                print("El area del cuadrado es :", cal.areaCuadrado())
+                print("El área del cuadrado es :", cal.areaCuadrado())
                 input("Presione una tecla para continuar....")
 
     if opc == "2":
@@ -127,10 +127,10 @@ while opc != "5":
         while opc1 != "11":
             os.system("cls")
             print("OPERACIONES CON NUMEROS")
-            men1 = Menu("Menu secundario",
+            men1 = Menu("Menú secundario",
                         ["1)Presentar los números de 1 a n ", "2)Sumar los números de 1 a n",
-                         "3)Múltiplo de cualquier numero",
-                         "4)Presentar los divisores de un numero", "5)Numero Primo", "6)Factorial de cualquier numero",
+                         "3)Múltiplo de cualquier número",
+                         "4)Presentar los divisores de un número", "5)Número Primo", "6)Factorial de cualquier número",
                          "7)Fibonacci de una serie de n números", "8)Perfecto", "9)Primos gemelos", "10)Números amigos",
                          "11)Salir"])
             opc1 = men1.menu()
@@ -150,35 +150,35 @@ while opc != "5":
                 input("Presione una tecla para continuar....")
 
             elif opc1 == "3":
-                print("Múltiplo de cualquier numero")
+                print("Múltiplo de cualquier número")
                 print(" ")
-                n1 = int(input("Ingrese un numero: "))
-                n2 = int(input("Ingrese el segundo numero: "))
+                n1 = int(input("Ingrese un número: "))
+                n2 = int(input("Ingrese el segundo número: "))
                 cal = Basico()
                 cal.multiplo(n1, n2)
                 input("Presione una tecla para continuar....")
 
 
             elif opc1 == "4":
-                print("Presentar los divisores de un numero")
+                print("Presentar los divisores de un número")
                 print(" ")
-                n1 = int(input("Ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
                 cal = Basico()
                 print("los divisores son: ", cal.Divisores(n1))
                 input("Presione una tecla para continuar....")
 
             elif opc1 == "5":
-                print("Numero Primo")
+                print("Número Primo")
                 print(" ")
-                n1 = int(input(" ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
                 cal = Basico()
                 cal.primo(n1)
                 input("Presione una tecla para continuar....")
 
             elif opc1 == "6":
-                print("Factorial de cualquier numero")
+                print("Factorial de cualquier número")
                 print(" ")
-                n1 = int(input(" ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
                 cal = Intermedio()
                 print(cal.factorial(n1))
                 input("Presione una tecla para continuar....")
@@ -186,7 +186,7 @@ while opc != "5":
             elif opc1 == "7":
                 print("Fibonacci de una serie de n números")
                 print(" ")
-                n1 = int(input(" ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
                 cal = Intermedio()
                 print(cal.fibonacci(n1))
                 input("Presione una tecla para continuar....")
@@ -194,7 +194,7 @@ while opc != "5":
             elif opc1 == "8":
                 print("Perfecto")
                 print(" ")
-                n1 = int(input(" ingrese un numero: "))
+                n1 = int(input("Ingrese un número: "))
                 cal = Basico()
                 cal.perfect(n1)
                 input("Presione una tecla para continuar....")
@@ -202,8 +202,8 @@ while opc != "5":
             elif opc1 == "9":
                 print("Primos gemelos")
                 print(" ")
-                n1 = int(input(" ingrese un numero: "))
-                n2 = int(input(" ingrese un segundo numero: "))
+                n1 = int(input("Ingrese un número: "))
+                n2 = int(input("Ingrese un segundo número: "))
                 cal = Intermedio()
                 cal.primosGemelos(n1, n2)
                 input("Presione una tecla para continuar....")
@@ -211,8 +211,8 @@ while opc != "5":
             elif opc1 == "10":
                 print("Números amigos")
                 print(" ")
-                n1 = int(input(" ingrese un numero: "))
-                n2 = int(input(" ingrese un segundo numero: "))
+                n1 = int(input("Ingrese un número: "))
+                n2 = int(input("Ingrese un segundo número: "))
                 cal = Intermedio()
                 cal.numAmigos(n1, n2)
                 input("Presione una tecla para continuar....")
@@ -226,7 +226,7 @@ while opc != "5":
         while opc1 != "11":
             os.system("cls")
             print("LISTAS")
-            men1 = Menu("Menu secundario",
+            men1 = Menu("Menú secundario",
                         ["1)Recorrer y presentar los datos de una lista",
                          "2)Buscar un valor en una lista",
                          "3)Retornar una lista con los factoriales",
@@ -250,7 +250,7 @@ while opc != "5":
 
             elif opc1 == "2":
                 print("Buscar un valor en una lista")
-                num = int(input("Ingrese numero a buscar: "))
+                num = int(input("Ingrese número a buscar: "))
                 lis.buscarLista(num)
                 input("Presione una tecla para continuar....")
 
@@ -311,7 +311,7 @@ while opc != "5":
         while opc1 != "10":
             os.system("cls")
             print("CADENAS")
-            men1 = Menu("Menu secundario",
+            men1 = Menu("Menú secundario",
                         ["1)Recorrer y presentar los datos de una cadena ",
                          "2)Buscar un carácter en una cadena",
                          "3)Retornar una lista con la posiciones dado un carácter de la cadena",
